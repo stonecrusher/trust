@@ -20,7 +20,7 @@ function Splash(config){
 	self.dom.className = "object";
 	self.dom.style.left = x+"px";
 	self.dom.style.top = y+"px";
-	
+
 	// APP
 	var app = new PIXI.Application(width, height, {transparent:true, resolution:2});
 	app.view.style.width = width;
@@ -60,14 +60,14 @@ function Splash(config){
 			self.addPeep(x,y);
 		}
 	};
-	_createRing(400, 20);
-	_createRing(520, 25);
-	_createRing(640, 30);
-	_createRing(760, 35);
+	_createRing(425, 20);
+	_createRing(545, 25);
+	_createRing(665, 30);
+	_createRing(785, 35);
 
 	// Connect all within a radius
 	var _connectAllWithinRadius = function(radius){
-		
+
 		var r2 = radius*radius;
 
 		for(var i=0;i<peeps.length;i++){
@@ -138,7 +138,7 @@ function SplashPeep(config){
 	var speed = (0.05+Math.random()*0.95)/60;
 
 	self.update = function(delta){
-		
+
 		// Them variables...
 		angle += speed*delta;
 		var x = initX + Math.cos(angle)*radius;
@@ -187,7 +187,7 @@ function SplashEdge(config){
 	self.to = config.to;
 
 	self.update = function(delta){
-		
+
 		// Just update graphics!
 		var f = self.from.graphics;
 		var t = self.to.graphics;
@@ -196,7 +196,7 @@ function SplashEdge(config){
 		var a = Math.atan2(dy,dx);
 		var dist = Math.sqrt(dx*dx+dy*dy);
 
-		g.x = f.x; 
+		g.x = f.x;
 		g.y = f.y;
 		g.rotation = a;
 

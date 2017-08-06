@@ -108,7 +108,7 @@ SLIDES.push({
 	onstart: function(self){
 
 		var o = self.objects;
-		
+
 		// Circular Wordbox
 		self.add({
 			id:"intro_text", type:"TextBox",
@@ -118,8 +118,8 @@ SLIDES.push({
 
 		// Button
 		self.add({
-			id:"intro_button", type:"Button", x:304, y:466, size:"long",
-			text_id:"intro_button", 
+			id:"intro_button", type:"Button", x:304, y:514, size:"long",
+			text_id:"intro_button",
 			message:"slideshow/scratch"
 		});
 
