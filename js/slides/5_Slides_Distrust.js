@@ -8,7 +8,7 @@ SLIDES.push({
 
 	},
 	onstart: function(self){
-		
+
 		var o = self.objects;
 
 		// Reset Tournament
@@ -88,7 +88,7 @@ SLIDES.push({
 
 SLIDES.push({
 	onstart: function(self){
-		
+
 		var o = self.objects;
 
 		// Words
@@ -97,7 +97,7 @@ SLIDES.push({
 
 		// Slider Label & Slider
 		var x = 0;
-		var y = 350;
+		var y = 395;
 		self.add({
 			id:"roundsLabel", type:"TextBox",
 			x:0, y:y, width:450, size:25, noSelect:true
@@ -130,7 +130,7 @@ SLIDES.push({
 		var _showContinue = function(){
 			_showContinue = null;
 			var x = 125;
-			var y = 430;
+			var y = 475;
 			self.add({
 				id:"continueLabel", type:"TextBox",
 				x:x, y:y+5, width:200, height:50,
@@ -171,14 +171,14 @@ SLIDES.push({
 		// Worse...
 		self.add({
 			id:"next", type:"Button",
-			x:0, y:450, size:"long",
+			x:0, y:490, size:"long",
 			text_id:"distrust_3_btn",
 			message: "slideshow/next"
 		});
 		_hide(o.next); _fadeIn(o.next, 400);
 
 	},
-	onend: function(self){	
+	onend: function(self){
 		self.remove("text");
 		self.remove("next");
 	}
@@ -222,7 +222,7 @@ SLIDES.push({
 			_showContinue = null;
 			self.add({
 				id:"continueLabel", type:"TextBox",
-				x:0, y:480, width:320, 
+				x:0, y:480, width:320,
 				align:"right", color:"#aaa", size:17,
 				text_id:"distrust_4_note"
 			});
@@ -295,7 +295,7 @@ SLIDES.push({
 		_hide(o.next); _fadeIn(o.next, 400);
 
 	},
-	onend: function(self){	
+	onend: function(self){
 		unlisten(_);
 		unlisten(_.misc);
 		self.clear();
