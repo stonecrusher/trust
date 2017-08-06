@@ -202,7 +202,7 @@ SLIDES.push({
 		// PAYOFFS
 		self.add({
 			id:"payoffs", type:"PayoffsUI",
-			x:105, y:73, scale:0.8, slideshow:self
+			x:105, y:88, scale:0.8, slideshow:self
 		});
 		_hide(o.payoffs); _fadeIn(o.payoffs, 300);
 		listen(_.misc, "payoffs/onchange", function(value){
@@ -212,7 +212,7 @@ SLIDES.push({
 		// More words
 		self.add({
 			id:"text2", type:"TextBox",
-			x:0, y:320, width:450, height:500,
+			x:0, y:330, width:450, height:500,
 			text_id:"distrust_4_2"
 		});
 		_hide(o.text2); _fadeIn(o.text2, 500);
@@ -288,7 +288,7 @@ SLIDES.push({
 		// Worse...
 		self.add({
 			id:"next", type:"Button",
-			x:0, y:450, size:"long",
+			x:0, y:500, size:"long",
 			text_id:"distrust_5_btn",
 			message: "slideshow/scratch"
 		});
