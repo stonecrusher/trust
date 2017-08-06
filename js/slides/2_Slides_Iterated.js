@@ -1,29 +1,29 @@
 SLIDES.push({
 
 	id: "iterated",
-	
+
 	onjump: function(self){
 
 		Tournament.resetGlobalVariables();
 
 		// Iterated Simulation
-		self.add({id:"iterated", type:"Iterated", x:130, y:133});
+		self.add({id:"iterated", type:"Iterated", x:130, y:143});
 		self.objects.iterated.dehighlightPayoff();
 
 		// Labels
 		self.add({
 			id:"labelYou", type:"TextBox",
-			x:211, y:201, width:50, height:50,
+			x:211, y:211, width:50, height:50,
 			align:"center", color:"#aaa", size:17,
 			text_id:"label_you"
 		});
 		self.add({
 			id:"labelThem", type:"TextBox",
-			x:702, y:189, width:50, height:50,
+			x:702, y:199, width:50, height:50,
 			align:"center", color:"#aaa", size:17,
 			text_id:"label_them"
 		});
-		
+
 	},
 
 	onstart: function(self){
@@ -35,16 +35,16 @@ SLIDES.push({
 		// Words on top & bottom
 		self.add({
 			id:"topWords", type:"TextBox", text_id:"iterated_intro_top",
-			x:130, y:10, width:700, height:100, align:"center"
+			x:130, y:0, width:700, height:100, align:"center"
 		});
 		self.add({
 			id:"btmWords", type:"TextBox", text_id:"iterated_intro_btm",
-			x:130, y:410, width:700, height:100, align:"center"
+			x:130, y:420, width:700, height:100, align:"center"
 		});
 
 		// Buttons
 		self.add({
-			id:"buttonCheat", type:"Button", x:275, y:453, uppercase:true,
+			id:"buttonCheat", type:"Button", x:275, y:460, uppercase:true,
 			text_id:"label_cheat",
 			onclick:function(){
 				_.answer = "CHEAT";
@@ -52,7 +52,7 @@ SLIDES.push({
 			}
 		});
 		self.add({
-			id:"buttonCooperate", type:"Button", x:495, y:450, uppercase:true,
+			id:"buttonCooperate", type:"Button", x:495, y:460, uppercase:true,
 			text_id:"label_cooperate",
 			onclick:function(){
 				_.answer = "COOPERATE";
@@ -108,13 +108,13 @@ SLIDES.push({
 		o.iterated.dom.style.top = 183;
 
 		// Scoreboard!
-		self.add({id:"scoreboard", type:"IteratedScoreboard", x:378, y:85});
+		self.add({id:"scoreboard", type:"IteratedScoreboard", x:378, y:95});
 
 		// Extra info up top
 		_.yourTotalScore = 0;
 		self.add({
 			id:"info", type:"TextBox",
-			x:378, y:45, width:200, height:50, align:"center", size:15
+			x:378, y:55, width:200, height:50, align:"center", size:15
 		});
 		var _showInfo = function(){
 			var infoWords = Words.get("iterated_info_1");
@@ -169,7 +169,7 @@ SLIDES.push({
 
 				// Next opponent
 				ROUND_NUM = 0;
-				ROUND_INDEX++; 
+				ROUND_INDEX++;
 				if(ROUND_INDEX >= ROUNDS.length){
 					publish("slideshow/scratch"); // NEXT SLIDE, WHATEVER
 				}else{
@@ -191,7 +191,7 @@ SLIDES.push({
 				publish("buttonCheat/activate");
 				publish("buttonCooperate/activate");
 			}
-			
+
 		});
 
 		_showInfo();
@@ -224,21 +224,21 @@ SLIDES.push({
 		// Score text part 1
 		self.add({
 			id:"score1", type:"TextBox",
-			x:24, y:32, width:243, height:26,
+			x:24, y:42, width:243, height:26,
 			text_id:"iterated_score_start"
 		});
 
 		// Score
 		self.add({
 			id:"score2", type:"TextBox",
-			x:114, y:44, width:151, height:132, align:"right", size:123,
+			x:114, y:54, width:151, height:132, align:"right", size:123,
 			text: _.yourTotalScore+""
 		});
 
 		// Score text part 2
 		self.add({
 			id:"score3", type:"TextBox",
-			x:290, y:62, width:639, height:123,
+			x:290, y:72, width:659, height:123,
 			text: Words.get(scoreTextID)+" "+Words.get("iterated_score_end")+"<br><br>"+Words.get("who_were")
 		});
 
@@ -247,27 +247,27 @@ SLIDES.push({
 
 		self.add({
 			id:"char_tft", type:"CharacterTextBox",
-			x:39, y:208, width:470, height:114,
+			x:39, y:218, width:470, height:114,
 			character: "tft"
 		});
 		self.add({
 			id:"char_all_d", type:"CharacterTextBox",
-			x:511, y:208, width:190, height:114,
+			x:511, y:218, width:200, height:114,
 			character: "all_d"
 		});
 		self.add({
 			id:"char_all_c", type:"CharacterTextBox",
-			x:731, y:208, width:200, height:114,
+			x:731, y:218, width:220, height:114,
 			character: "all_c"
 		});
 		self.add({
 			id:"char_grudge", type:"CharacterTextBox",
-			x:39, y:333, width:380, height:114,
+			x:39, y:343, width:380, height:114,
 			character: "grudge"
 		});
 		self.add({
 			id:"char_prober", type:"CharacterTextBox",
-			x:431, y:333, width:500, height:114,
+			x:431, y:343, width:520, height:114,
 			character: "prober"
 		});
 
@@ -277,13 +277,13 @@ SLIDES.push({
 		// Next...
 		self.add({
 			id:"next", type:"TextBox",
-			x:104, y:478, width:447, height:37,
+			x:104, y:488, width:447, height:37,
 			text_id: "characters_teaser"
 		});
 
 		// Next Button!
 		self.add({
-			id:"next_button", type:"Button", x:544, y:471, size:"long",
+			id:"next_button", type:"Button", x:544, y:481, size:"long",
 			text_id:"characters_button",
 			message:"slideshow/scratch"
 		});
