@@ -89,9 +89,9 @@ SLIDES.push({
 				});
 			})(character, x, y);
 		};
-		_addButton("all_c", 510, 295);
-		_addButton("all_d", 510, 295+70);
-		_addButton("tft", 510, 295+70*2);
+		_addButton("all_c", 510, 305);
+		_addButton("all_d", 510, 305+70);
+		_addButton("tft", 510, 305+70*2);
 
 		// WHO'S WHO?
 		self.add({
@@ -205,7 +205,7 @@ SLIDES.push({
 
 		// Oh by the way...
 		self.add({
-			id:"button", type:"Button", x:510, y:320,
+			id:"button", type:"Button", x:510, y:390,
 			text_id:"evo_9_btn", size:"long",
 			message: "slideshow/next"
 		});
@@ -280,7 +280,7 @@ SLIDES.push({
 
 			// Button: next (hidden)
 			self.add({
-				id:"next", type:"Button", x:510, y:450,
+				id:"next", type:"Button", x:510, y:485,
 				text_id:"evo_10_btn", size:"long",
 				message: "slideshow/next"
 			});
@@ -319,7 +319,7 @@ SLIDES.push({
 
 		// Next
 		self.add({
-			id:"next", type:"Button", x:510, y:425,
+			id:"next", type:"Button", x:510, y:470,
 			text_id:"evo_11_btn", size:"long",
 			message: "slideshow/next"
 		});
