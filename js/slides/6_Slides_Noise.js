@@ -524,7 +524,7 @@ SLIDES.push({
 
 		// Next button
 		self.add({
-			id:"button", type:"Button", x:510, y:466,
+			id:"button", type:"Button", x:510, y:526,
 			text_id:"noise_evo_6_btn", size:"long",
 			message:"slideshow/scratch"
 		});
