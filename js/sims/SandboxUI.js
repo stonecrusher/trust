@@ -35,7 +35,7 @@ function SandboxUI(config){
 		x:172, y:135+70, text_id:"label_step", message:"tournament/step", size:"short"
 	});
 	dom.appendChild(stepButton.dom);
-	
+
 	var resetButton = new Button({x:172, y:135+70*2, text_id:"label_reset", message:"tournament/reset", size:"short"});
 	dom.appendChild(resetButton.dom);
 
@@ -68,7 +68,7 @@ function SandboxUI(config){
 
 	};
 	_makeHitbox(Words.get("label_population"), 30, 100, 0);
-	_makeHitbox(Words.get("label_payoffs"), 220, 100, 1);
+	_makeHitbox(Words.get("label_payoffs"), 215, 100, 1);
 	_makeHitbox(Words.get("label_rules"), 366, 100, 2);
 
 	// Pages
@@ -229,7 +229,7 @@ function SandboxUI(config){
 		Tournament.INITIAL_AGENTS.find(function(config){
 			return config.strategy==peepID;
 		}).count = value;
-		
+
 		// What's the scale for the rest of 'em?
 		var newRemainder = 25-value;
 		var scale = newRemainder/_remainder;
@@ -252,7 +252,7 @@ function SandboxUI(config){
 		}
 		total += value; // total
 
-		// Difference... 
+		// Difference...
 		var diff = 25-total;
 		// If negative, remove one starting from BOTTOM, skipping anchor.
 		// (UNLESS IT'S ZERO)
@@ -314,7 +314,7 @@ function SandboxUI(config){
 
 	// Labels
 	page.appendChild(_makeLabel("sandbox_payoffs", {x:0, y:0, w:433}));
-	
+
 	// PAYOFFS
 	var payoffsUI = new PayoffsUI({x:84, y:41, scale:0.9, slideshow:self});
 	page.appendChild(payoffsUI.dom);
@@ -392,7 +392,7 @@ function SandboxUI(config){
 	/////////////////////////////////////////
 	// Add & Remove Object //////////////////
 	/////////////////////////////////////////
-	
+
 	// Add...
 	self.add = function(){
 		_add(self);
