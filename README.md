@@ -1,3 +1,11 @@
+This is the German translation of Nicky Case's phenomenal *explorable explanation* "The Evolution of Trust".
+
+You can [play it at here](https://jkoelling.github.io/trust/). It's also linked from the original English version. 
+
+Please open an issue if you find an error with the translation or if text overlaps other elements of the user interface. All other issues belong [upstream](https://github.com/ncase/trust).
+
+---
+
 !["The Evolution of Trust"](https://i.imgur.com/kde760y.png)
 
 #	PLAY IT HERE: [http://ncase.me/trust/](http://ncase.me/trust/)
